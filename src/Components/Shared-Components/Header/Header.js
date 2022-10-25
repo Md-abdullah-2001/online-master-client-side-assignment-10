@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Image } from "react-bootstrap";
 import { FaToggleOff, FaToggleOn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Img from "../../../../src/Assest/favicon.svg";
 
 const Header = () => {
@@ -16,9 +17,9 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg bg-success ">
       <div className="container">
         <Image src={Img}></Image>
-        <a className="navbar-brand text-light fs-3" href="/">
+        <Link to="/" className="navbar-brand text-light fs-3" href="/">
           Online-Master
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -33,18 +34,22 @@ const Header = () => {
         <div className="collapse navbar-collapse ps-5 ms-5" id="navbarNav">
           <ul className="navbar-nav ms-5 ">
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link active text-light fs-5"
                 aria-current="page"
-                href="/"
+                to="/home"
               >
                 HOME
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link  text-light fs-5 ms-4" href="/">
+              <Link
+                to="courses"
+                className="nav-link  text-light fs-5 ms-4"
+                href="/"
+              >
                 COURSES
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link text-light fs-5 ms-4" href="/">
