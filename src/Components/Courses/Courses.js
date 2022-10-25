@@ -6,10 +6,10 @@ const Courses = () => {
   return (
     <div>
       <Row>
-        <Col md={2}>
+        <Col md={3}>
           <SideContent></SideContent>
         </Col>
-        <Col md={10}>
+        <Col md={9}>
           <CourseContent></CourseContent>
         </Col>
       </Row>
