@@ -1,25 +1,23 @@
-import React from "react";
-import { Container, Image, Nav, Navbar } from "react-bootstrap";
+import React, { useState } from "react";
+import { Image } from "react-bootstrap";
+import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 import Img from "../../../../src/Assest/favicon.svg";
 
 const Header = () => {
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const toggler = () => {
+    setIsEnabled(true);
+    console.log("clicked");
+
+    return <FaToggleOn></FaToggleOn>;
+  };
   return (
-    // <Navbar bg="primary" variant="dark">
-    //   <Container>
-    //     <Image src={Img}></Image>
-    //     <Navbar.Brand href="#home">Online-Master</Navbar.Brand>
-    //     <Nav className="me-auto">
-    //       <Nav.Link href="#home">Home</Nav.Link>
-    //       <Nav.Link href="#features">Features</Nav.Link>
-    //       <Nav.Link href="#pricing">Pricing</Nav.Link>
-    //     </Nav>
-    //   </Container>
-    // </Navbar>
     <nav className="navbar navbar-expand-lg bg-success ">
       <div className="container">
         <Image src={Img}></Image>
         <a className="navbar-brand text-light fs-3" href="/">
-          Navbar
+          Online-Master
         </a>
         <button
           className="navbar-toggler"
@@ -59,6 +57,10 @@ const Header = () => {
               </a>
             </li>
           </ul>
+          <FaToggleOff
+            onClick={toggler}
+            className="fs-2 ms-3 text-light"
+          ></FaToggleOff>
         </div>
       </div>
     </nav>
