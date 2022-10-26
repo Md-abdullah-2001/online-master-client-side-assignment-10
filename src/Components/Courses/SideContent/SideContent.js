@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CourseContent from "../CourseContent/CourseContent";
 
 const SideContent = () => {
   const [types, setTypes] = useState([]);
@@ -16,7 +17,7 @@ const SideContent = () => {
       <div>
         {types.map((type) => (
           <h5 key={type.id}>
-            <Link to={`/types/${type.id}`}>{type.course_name}</Link>
+            <Link to={`/courses/${type.id}`}>{type.course_name}</Link>
           </h5>
         ))}
       </div>
