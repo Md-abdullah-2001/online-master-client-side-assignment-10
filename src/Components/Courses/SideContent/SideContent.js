@@ -12,8 +12,8 @@ const SideContent = () => {
       .then((data) => setTypes(data));
   }, []);
   return (
-    <div>
-      <h1>All the courses</h1>
+    <div className=" shadow p-5 me-4 h-100">
+      <h3>Find Coursess</h3>
       <div>
         {types.map((type) => (
           <h5 key={type.id}>

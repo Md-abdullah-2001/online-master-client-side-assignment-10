@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import { Button, Image } from "react-bootstrap";
 import "./Details.css";
+import { Link } from "react-router-dom";
 
 const DetailsData = ({ newsDetails }) => {
   const componentRef = useRef();
@@ -11,7 +12,7 @@ const DetailsData = ({ newsDetails }) => {
     onafterprint: () => alert("print success"),
   });
   console.log(newsDetails);
-  const { course_name, img, description } = newsDetails;
+  const { course_name, img, description, id } = newsDetails;
 
   return (
     <div className="detail">
@@ -22,7 +23,9 @@ const DetailsData = ({ newsDetails }) => {
         </Button>{" "}
         <h1>{course_name}</h1>
         <p ref={componentRef}>{description}</p>
-        <Button variant="danger">Premium access</Button>{" "}
+        <Link to={`/checkoutpage/${id}`}>
+          <Button variant="danger">Premium access</Button>{" "}
+        </Link>
       </div>
     </div>
   );

@@ -9,14 +9,8 @@ import Button from "react-bootstrap/Button";
 
 const Header = () => {
   const { user, logUserOut } = useContext(ContextProvider);
-  // const [isEnabled, setIsEnabled] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false);
 
-  // const toggler = () => {
-  //   setIsEnabled(true);
-  //   console.log("clicked");
-
-  //   return <FaToggleOn></FaToggleOn>;
-  // };
   const logOutBtn = () => {
     logUserOut().then(() => {});
   };
@@ -89,7 +83,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/regisrer"
+                    to="/register"
                     className="nav-link text-light fs-5 ms-4"
                   >
                     REGISTER
@@ -99,9 +93,21 @@ const Header = () => {
             )}
           </ul>
         </div>
-        <FaToggleOff className="fs-2 ms-3 text-light"></FaToggleOff>
+
+        {isEnabled ? (
+          <FaToggleOn
+            className="fs-2  text-light"
+            onClick={() => setIsEnabled(!isEnabled)}
+          />
+        ) : (
+          <FaToggleOff
+            className="fs-2  text-light"
+            onClick={() => setIsEnabled(!isEnabled)}
+          />
+        )}
       </div>
     </nav>
+    //
   );
 };
 

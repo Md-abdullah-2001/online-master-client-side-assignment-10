@@ -3,7 +3,6 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./CourseContent.css";
 const EveryCars = ({ card }) => {
-  console.log(card);
   const { course_name, img, id } = card;
   return (
     <div className="card">
