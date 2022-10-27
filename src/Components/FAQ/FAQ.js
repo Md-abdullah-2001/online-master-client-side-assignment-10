@@ -1,6 +1,6 @@
 import React from "react";
 
-const Blogs = () => {
+const FAQ = () => {
   return (
     <div>
       <div
@@ -8,7 +8,7 @@ const Blogs = () => {
         id="accordionPanelsStayOpenExample"
       >
         <h1 className="text-canter mb-5 mt-5">
-          Useful Technology Question and Answers
+          Find Your Question and Answers
         </h1>
         <div className="accordion-item">
           <h2 className="accordion-header" id="panelsStayOpen-headingOne">
@@ -20,7 +20,7 @@ const Blogs = () => {
               aria-expanded="true"
               aria-controls="panelsStayOpen-collapseOne"
             >
-              what is cors?
+              Why will I use Your WEBSITE?
             </button>
           </h2>
           <div
@@ -29,15 +29,8 @@ const Blogs = () => {
             aria-labelledby="panelsStayOpen-headingOne"
           >
             <div className="accordion-body">
-              <strong>Cross-origin resource sharing (CORS)</strong>
-              is a browser security feature that restricts cross-origin HTTP
-              requests that are initiated from scripts running in the browser.
-              If your REST API's resources receive non-simple cross-origin HTTP
-              requests, you need to enable CORS support. CORS Issue in Frontend
-              Frameworks allow users to replicate the setup in development. As
-              this setup is done at the server end, whenever a cross-origin
-              request is made to the server, we can use middleware like
-              http-proxy-middleware to proxy requests.
+              Our website is made using modern technologies that makes your
+              experience smoother and Fun while kearning something.
             </div>
           </div>
         </div>
@@ -51,8 +44,7 @@ const Blogs = () => {
               aria-expanded="false"
               aria-controls="panelsStayOpen-collapseTwo"
             >
-              Why are you using firebase? What other options do you have to
-              implement authentication?
+              What is special about Courses on this plateform?
             </button>
           </h2>
           <div
@@ -61,17 +53,9 @@ const Blogs = () => {
             aria-labelledby="panelsStayOpen-headingTwo"
           >
             <div className="accordion-body">
-              <strong>
-                {" "}
-                It is Firebase Authentication provides backend services,
-              </strong>{" "}
-              It is Firebase Authentication provides backend services,
-              easy-to-use SDKs, and ready-made UI libraries to authenticate
-              users to your app. It supports authentication using passwords,
-              phone numbers, popular federated identity providers like Google,
-              Facebook and Twitter, and more. Auth0, MongoDB, Passport, Okta,
-              and Firebase are the most popular alternatives and competitors to
-              Firebase Authentication.
+              Thousands of Students from around the globe learning from this
+              plateform that makes it special and proves our acceptability. Also
+              we have got hundreds of world class tutor.
             </div>
           </div>
         </div>
@@ -85,7 +69,7 @@ const Blogs = () => {
               aria-expanded="false"
               aria-controls="panelsStayOpen-collapseThree"
             >
-              How does the private route work ?
+              If i buy course, Will it be life-time accesssed?
             </button>
           </h2>
           <div
@@ -94,12 +78,8 @@ const Blogs = () => {
             aria-labelledby="panelsStayOpen-headingThree"
           >
             <div className="accordion-body">
-              <strong>It is The private route component</strong> It is The
-              private route component is similar to the public route, the only
-              change is that redirect URL and authenticate condition. If the
-              user is not authenticated he will be redirected to the login page
-              and the user can only access the authenticated routes If he is
-              authenticated (Logged in).
+              Yeah, Once you buy, you get life-long access to learn and get your
+              Courses.
             </div>
           </div>
         </div>
@@ -113,7 +93,7 @@ const Blogs = () => {
               aria-expanded="false"
               aria-controls="panelsStayOpen-collapseFour"
             >
-              What is Node? How does Node work?
+              Is there any Discount in your courses?
             </button>
           </h2>
           <div
@@ -122,16 +102,9 @@ const Blogs = () => {
             aria-labelledby="panelsStayOpen-headingFour"
           >
             <div className="accordion-body">
-              <strong> Node.</strong> js is a JavaScript runtime environment
-              that achieves low latency and high throughput by taking a
-              “non-blocking” approach to serving requests. In other words, Node.
-              js wastes no time or resources on waiting for I/O requests to
-              return. What is node and how it works? Image result for What is
-              Node? How does Node work? It is a used as backend service where
-              javascript works on the server-side of the application. This way
-              javascript is used on both frontend and backend. Node. js runs on
-              chrome v8 engine which converts javascript code into machine code,
-              it is highly scalable, lightweight, fast, and data-intensive
+              There are lot of courses where you will find discounts depending
+              on the course you buy. Also we have seasonal discount offer that
+              is given in summer and winter.
             </div>
           </div>
         </div>
@@ -140,4 +113,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default FAQ;

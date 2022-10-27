@@ -58,9 +58,13 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light fs-5 ms-4" href="/">
+              <Link
+                to="/faq"
+                className="nav-link text-light fs-5 ms-4"
+                href="/"
+              >
                 FAQ
-              </a>
+              </Link>
             </li>
 
             {user?.uid ? (

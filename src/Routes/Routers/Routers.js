@@ -6,6 +6,7 @@ import CheckoutPage from "../../Components/CheckoutPage/CheckoutPage";
 import CourseContent from "../../Components/Courses/CourseContent/CourseContent";
 import Courses from "../../Components/Courses/Courses";
 import DetailsData from "../../Components/Details_course/DetailsData";
+import FAQ from "../../Components/FAQ/FAQ";
 import Home from "../../Components/Home/Home";
 import Types from "../../Components/Types/Types";
 import Main from "../../Main/Main";
@@ -31,6 +32,7 @@ export const route = createBrowserRouter([
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Registration></Registration> },
       { path: "/blogs", element: <Blogs></Blogs> },
+      { path: "/faq", element: <FAQ></FAQ> },
       {
         path: "/checkoutpage/:id",
         loader: ({ params }) =>
