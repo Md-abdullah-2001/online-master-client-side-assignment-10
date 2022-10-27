@@ -83,7 +83,7 @@ const Login = () => {
         <span>Don't have an account?</span>
         <Link to="/register">Register</Link> <br />
         <Button variant="primary" type="submit">
-          Submit
+          Log-in
         </Button>
       </Form>
       <ButtonGroup className="sign-btn">

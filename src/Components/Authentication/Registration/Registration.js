@@ -77,7 +77,7 @@ const Registration = () => {
         <span>Already have an account?</span>
         <Link to="/login">Log-in</Link> <br />
         <Button variant="primary" type="submit">
-          Submit
+          Register
         </Button>
       </Form>
       <div></div>
