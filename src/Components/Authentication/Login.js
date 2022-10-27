@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ContextProvider } from "../../Context/ContextData";
 import { Button, ButtonGroup, Form } from "react-bootstrap";
 import { FaGithub, FaGoogle } from "react-icons/fa";
@@ -70,7 +70,6 @@ const Login = () => {
             required
           />
         </Form.Group>
-
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -81,7 +80,8 @@ const Login = () => {
           />
           <Form.Text className="text-danger">{error}</Form.Text>
         </Form.Group>
-
+        <span>Don't have an account?</span>
+        <Link to="/register">Register</Link> <br />
         <Button variant="primary" type="submit">
           Submit
         </Button>

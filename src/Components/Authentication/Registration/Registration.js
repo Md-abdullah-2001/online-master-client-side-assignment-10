@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Button, Form } from "react-bootstrap";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ContextProvider } from "../../../Context/ContextData";
 import "./Registration.css";
 
@@ -64,7 +64,6 @@ const Registration = () => {
             required
           />
         </Form.Group>
-
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -75,7 +74,8 @@ const Registration = () => {
           />
           <Form.Text className="text-danger">{error}</Form.Text>
         </Form.Group>
-
+        <span>Already have an account?</span>
+        <Link to="/login">Log-in</Link> <br />
         <Button variant="primary" type="submit">
           Submit
         </Button>
