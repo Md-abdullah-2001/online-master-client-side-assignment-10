@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../../Components/Authentication/Login";
 import Registration from "../../Components/Authentication/Registration/Registration";
+import Blogs from "../../Components/Blogs/Blogs";
 import CheckoutPage from "../../Components/CheckoutPage/CheckoutPage";
 import CourseContent from "../../Components/Courses/CourseContent/CourseContent";
 import Courses from "../../Components/Courses/Courses";
@@ -8,6 +9,7 @@ import DetailsData from "../../Components/Details_course/DetailsData";
 import Home from "../../Components/Home/Home";
 import Types from "../../Components/Types/Types";
 import Main from "../../Main/Main";
+import ErrorPage from "../ErrorPage/ErrorPage";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 export const route = createBrowserRouter([
   {
@@ -28,6 +30,7 @@ export const route = createBrowserRouter([
       { path: "/all_courses", element: <CourseContent></CourseContent> },
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Registration></Registration> },
+      { path: "/blogs", element: <Blogs></Blogs> },
       {
         path: "/checkoutpage/:id",
         loader: ({ params }) =>
@@ -39,5 +42,6 @@ export const route = createBrowserRouter([
         ),
       },
     ],
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);

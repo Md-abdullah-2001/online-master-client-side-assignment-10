@@ -1,20 +1,15 @@
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
-import { Button, ButtonGroup, Form } from "react-bootstrap";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Button, Form } from "react-bootstrap";
+
 import { useNavigate } from "react-router-dom";
 import { ContextProvider } from "../../../Context/ContextData";
 import "./Registration.css";
 
-// provider
-const provider = new GoogleAuthProvider();
-const gitProvide = new GithubAuthProvider();
 const Registration = () => {
   const navigate = useNavigate();
-  const { createNewUser, googleProvider, updateProfileData, githubProvider } =
-    useContext(ContextProvider);
+  const { createNewUser, updateProfileData } = useContext(ContextProvider);
   const [error, setError] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,22 +41,6 @@ const Registration = () => {
       .catch((error) => console.error(error));
   };
 
-  const handleSubmitGoogle = () => {
-    googleProvider(provider)
-      .then((result) => {
-        const user = result.user;
-        navigate("/courses");
-      })
-      .catch((error) => console.error(error));
-  };
-  const handleSubmitGithub = () => {
-    githubProvider(gitProvide)
-      .then((result) => {
-        const user = result.user;
-        navigate("/courses");
-      })
-      .catch((error) => console.error(error));
-  };
   return (
     <>
       <Form
@@ -101,25 +80,7 @@ const Registration = () => {
           Submit
         </Button>
       </Form>
-      <div>
-        <ButtonGroup className="sign-btn">
-          <Button
-            onClick={handleSubmitGoogle}
-            className="mb-2 me-2"
-            variant="outline-primary"
-          >
-            <FaGoogle></FaGoogle> Sign in with
-          </Button>
-
-          <Button
-            onClick={handleSubmitGithub}
-            className="mb-2"
-            variant="outline-dark"
-          >
-            <FaGithub></FaGithub> Sign in with
-          </Button>
-        </ButtonGroup>
-      </div>
+      <div></div>
     </>
   );
 };

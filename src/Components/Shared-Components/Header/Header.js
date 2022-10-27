@@ -49,9 +49,13 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light fs-5 ms-4" href="/">
+              <Link
+                to="/blogs"
+                className="nav-link text-light fs-5 ms-4"
+                href="/"
+              >
                 BLOG
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link text-light fs-5 ms-4" href="/">
