@@ -39,7 +39,7 @@ const Login = () => {
     googleProvider(provider)
       .then((result) => {
         const user = result.user;
-        navigate("/courses");
+        navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };
@@ -47,7 +47,7 @@ const Login = () => {
     githubProvider(gitProvide)
       .then((result) => {
         const user = result.user;
-        navigate("/courses");
+        navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };

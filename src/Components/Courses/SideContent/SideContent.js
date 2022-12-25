@@ -7,7 +7,7 @@ import CourseContent from "../CourseContent/CourseContent";
 const SideContent = () => {
   const [types, setTypes] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/courses-type`)
+    fetch(`https://server-side-data-delta.vercel.app/courses-type`)
       .then((res) => res.json())
       .then((data) => setTypes(data));
   }, []);

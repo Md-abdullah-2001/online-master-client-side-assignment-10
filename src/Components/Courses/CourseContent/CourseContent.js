@@ -6,7 +6,7 @@ import "./CourseContent.css";
 const CourseContent = () => {
   const [types, setTypes] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/courses_detail`)
+    fetch(`https://server-side-data-delta.vercel.app/courses_detail`)
       .then((res) => res.json())
       .then((data) => setTypes(data));
   }, []);

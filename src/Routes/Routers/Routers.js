@@ -22,7 +22,9 @@ export const route = createBrowserRouter([
       {
         path: "/courses/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courses_detail/${params.id}`),
+          fetch(
+            `https://server-side-data-delta.vercel.app/courses_detail/${params.id}`
+          ),
         element: <Types></Types>,
       },
 
@@ -36,7 +38,9 @@ export const route = createBrowserRouter([
       {
         path: "/checkoutpage/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courses_detail/${params.id}`),
+          fetch(
+            `https://server-side-data-delta.vercel.app/courses_detail/${params.id}`
+          ),
         element: (
           <PrivateRoutes>
             <CheckoutPage></CheckoutPage>
